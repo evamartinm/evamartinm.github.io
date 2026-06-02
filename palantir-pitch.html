@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palantir (PLTR) — Short Thesis · Eva Martin Madhumal</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#fafaf8; --white:#fff; --ink:#1a1a18; --mid:#777770; --faint:#aaa;
+  --rule:#e4e4e0; --hover:#f0f0ec; --pink:#b5434f; --blue:#2b5797;
+  --ph:#e8e6e2; --ph-text:#9a9890; --green:#3a7d52;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:"Inter",sans-serif;font-size:15px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;height:48px;padding:0 40px;
+  display:flex;justify-content:space-between;align-items:center;
+  background:rgba(250,250,248,0.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);
+}
+.nav-name{font-family:"EB Garamond",serif;font-size:17px}
+.nav-back{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid);transition:color 0.15s}
+.nav-back:hover{color:var(--ink)}
+
+.wrap{max-width:760px;margin:0 auto;padding:108px 40px 80px}
+
+.eyebrow{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--pink);margin-bottom:18px}
+h1{font-family:"EB Garamond",serif;font-weight:400;font-size:clamp(34px,5vw,50px);line-height:1.08;margin-bottom:20px}
+.lede{font-size:18px;color:var(--mid);line-height:1.65;max-width:620px;margin-bottom:40px}
+.lede strong{color:var(--ink);font-weight:500}
+
+/* stat strip */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-bottom:8px}
+.stat{background:var(--white);padding:16px 18px;display:flex;flex-direction:column;gap:5px}
+.stat .k{font-family:"JetBrains Mono",monospace;font-size:9px;letter-spacing:0.13em;text-transform:uppercase;color:var(--faint)}
+.stat .v{font-size:19px;font-weight:600;font-family:"EB Garamond",serif}
+.stat .v.short{color:var(--pink)}
+.stat .v.dn{color:var(--pink)}
+.asof{font-family:"JetBrains Mono",monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--faint);margin-bottom:52px}
+
+h2{font-family:"EB Garamond",serif;font-weight:500;font-size:24px;margin:46px 0 4px;padding-top:22px;border-top:1px solid var(--rule)}
+h2 .num{color:var(--pink);font-size:18px;margin-right:10px;font-family:"JetBrains Mono",monospace;font-weight:400}
+.sub{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);margin-bottom:16px}
+p{margin-bottom:16px;color:#2c2c28}
+p strong{font-weight:600;color:var(--ink)}
+ul{margin:0 0 16px 0;padding-left:0;list-style:none}
+li{position:relative;padding-left:22px;margin-bottom:10px;color:#2c2c28}
+li::before{content:"";position:absolute;left:2px;top:11px;width:5px;height:5px;background:var(--pink);border-radius:50%}
+
+.callout{background:var(--white);border-left:3px solid var(--pink);padding:20px 24px;margin:8px 0 8px;font-family:"EB Garamond",serif;font-size:19px;line-height:1.5}
+
+/* sensitivity table */
+.tbl{width:100%;border-collapse:collapse;margin:6px 0 18px;font-size:13px}
+.tbl caption{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid);text-align:left;margin-bottom:10px}
+.tbl th,.tbl td{border:1px solid var(--rule);padding:8px 10px;text-align:center}
+.tbl th{background:var(--ph);font-weight:600;font-size:11px;letter-spacing:0.03em}
+.tbl td.row-h{background:var(--ph);font-weight:600}
+.tbl td.base{background:#f4dde0;color:var(--pink);font-weight:600}
+
+.disclaimer{margin-top:56px;padding-top:20px;border-top:1px solid var(--rule);font-family:"JetBrains Mono",monospace;font-size:10px;line-height:1.8;letter-spacing:0.03em;color:var(--faint)}
+.back-link{display:inline-block;margin-top:36px;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--pink);border-bottom:1px solid var(--rule);padding-bottom:2px}
+
+@media(max-width:600px){
+  .wrap{padding:96px 22px 60px}
+  .stats{grid-template-columns:1fr 1fr}
+  nav{padding:0 22px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-name">Eva Martin Madhumal</a>
+  <a href="index.html" class="nav-back">← Back to portfolio</a>
+</nav>
+
+<div class="wrap">
+
+  <div class="eyebrow">Bristol Investment Fund · TMT · Equity Research</div>
+  <h1>Palantir Technologies <span style="color:var(--mid)">(NASDAQ: PLTR)</span></h1>
+  <p class="lede">A <strong>SHORT</strong> recommendation. Palantir is a genuinely strong business priced for a near-impossible outcome — the market is paying a software premium for revenue that is, at its core, lumpy, government-weighted and concentrated. We see the multiple, not the company, as the trade.</p>
+
+  <div class="stats">
+    <div class="stat"><span class="k">Recommendation</span><span class="v short">SHORT</span></div>
+    <div class="stat"><span class="k">Current price</span><span class="v">$175.00</span></div>
+    <div class="stat"><span class="k">Price target</span><span class="v">$74.12</span></div>
+    <div class="stat"><span class="k">Downside to target</span><span class="v dn">−58%</span></div>
+  </div>
+  <div class="asof">Horizon 2–3 years · Figures as at the date of the original analysis (early 2025)</div>
+
+  <div class="callout">Even if Palantir <em>doubled</em> its profits every year for the next three years, at today's price it would still trade on a P/E of roughly 75×. The bar the price implies is not ambitious — it is close to unrepeatable.</div>
+
+  <h2><span class="num">01</span>A valuation disconnected from fundamentals</h2>
+  <div class="sub">Thesis · Multiple compression</div>
+  <p>Palantir is a high-quality compounder — FY24 revenue of ~$2.87bn grew 29%, gross margins sit near 80%, and the business is now consistently profitable. None of that is in dispute. The dispute is price.</p>
+  <p>On next-twelve-month multiples Palantir trades at an extreme premium to every comparable in the software and AI universe:</p>
+  <ul>
+    <li><strong>EV/Revenue ~81×</strong> versus a peer set (Microsoft, ServiceNow, CrowdStrike, Salesforce, Oracle, Adobe) clustered between roughly 5× and 30×.</li>
+    <li><strong>EV/EBITDA ~172×</strong> and <strong>P/E ~231×</strong> — multiples of the next-highest names, not a modest premium to them.</li>
+    <li>A <strong>forward P/E near 375×</strong>, against ~53× for Nvidia and ~36× for Microsoft.</li>
+  </ul>
+  <p>A premium this large can only be justified by a growth path that compounds at exceptional rates for years without stumbling. Historical revenue CAGR has run around 27–30%; to grow into the current valuation, the implied required CAGR is closer to 80–100% over the medium term. Any quarter of guidance deceleration is therefore likely to trigger sharp multiple compression — the asymmetry that makes this a short.</p>
+
+  <h2><span class="num">02</span>Profitability is flattered, disclosure is thin</h2>
+  <div class="sub">Thesis · Earnings quality</div>
+  <p>Reported profitability leans heavily on stock-based compensation, which runs at roughly <strong>16% of revenue</strong>. Strip that out and "adjusted" earnings look materially less impressive, which matters a great deal when the valuation rests almost entirely on the trajectory of those earnings.</p>
+  <p>Compounding this, Palantir provides limited standalone disclosure on AIP — the AI platform doing much of the work in the bull narrative. The premium multiple is effectively underwritten by performance the market cannot directly verify, increasing the risk of a re-rating once the numbers are tested against expectations.</p>
+
+  <h2><span class="num">03</span>A structural ceiling on government growth</h2>
+  <div class="sub">Thesis · Concentration & procurement risk</div>
+  <p>Government work — defence, intelligence and national security — accounts for roughly 55% of revenue. That base is sticky, but it is also capped: government contracts carry termination rights, procurement is slow and highly competitive, and there is a finite volume of high-value awards the US government can route to a single vendor.</p>
+  <ul>
+    <li><strong>Budget sensitivity:</strong> the share price has historically reacted disproportionately to defence-spending headlines, underlining how exposed the story is to political and fiscal cycles.</li>
+    <li><strong>Execution risk:</strong> the troubled NHS Federated Data Platform programme illustrates the friction Palantir faces scaling overseas.</li>
+    <li><strong>Emerging competition:</strong> Govini — founded by a former Palantir national-security executive — has scaled past $100m ARR and won a ~$919m IDIQ for its Ark platform. A credible, vertical AI competitor inside Palantir's strongest franchise would force investors to reprice its long-term federal growth.</li>
+  </ul>
+  <p>The investment case also assumes government project work converts into a scalable, SaaS-like platform. We think the market overestimates how cleanly that translation happens.</p>
+
+  <h2>Valuation</h2>
+  <div class="sub">DCF · base case & sensitivity</div>
+  <p>Our discounted-cash-flow model points to a base-case fair value of <strong>$74.12</strong> — about 58% below the current price. The base case uses a WACC of 15.8% and a 5% terminal growth rate, with a cross-check against an exit-multiple approach (~12× revenue) that implies a similar direction of travel.</p>
+  <p>The conclusion is robust to reasonable changes in assumptions. Flexing WACC across 14.8%–16.8% and terminal growth across 3%–7% keeps the implied downside firmly negative across the entire grid:</p>
+  <table class="tbl">
+    <caption>Implied return vs current price — terminal growth (rows) × WACC (cols)</caption>
+    <tr><th></th><th>14.8%</th><th>15.3%</th><th>15.8%</th><th>16.3%</th><th>16.8%</th></tr>
+    <tr><td class="row-h">3%</td><td>−58%</td><td>−61%</td><td>−63%</td><td>−65%</td><td>−66%</td></tr>
+    <tr><td class="row-h">4%</td><td>−56%</td><td>−58%</td><td>−60%</td><td>−62%</td><td>−64%</td></tr>
+    <tr><td class="row-h">5%</td><td>−52%</td><td>−55%</td><td class="base">−58%</td><td>−60%</td><td>−62%</td></tr>
+    <tr><td class="row-h">6%</td><td>−48%</td><td>−51%</td><td>−54%</td><td>−57%</td><td>−60%</td></tr>
+    <tr><td class="row-h">7%</td><td>−42%</td><td>−47%</td><td>−50%</td><td>−54%</td><td>−57%</td></tr>
+  </table>
+  <p>Across the full range the downside spans roughly −42% to −66%. There is no realistic corner of the assumption set in which the current price looks defensible on fundamentals.</p>
+
+  <h2>Catalysts</h2>
+  <div class="sub">What forces the re-rating</div>
+  <ul>
+    <li><strong>Guidance deceleration.</strong> With the price implying near-flawless growth, any softening in forward guidance is the most direct trigger for multiple compression.</li>
+    <li><strong>FY2027 DoD budget (Jan–Mar 2026).</strong> The first formal venue where competitor Govini's momentum could appear in hard budget allocations — recognition of a credible federal-AI rival would pressure Palantir's long-term growth narrative.</li>
+    <li><strong>AIP scrutiny.</strong> As investors push for clearer AIP economics, thinner-than-hoped disclosure could undermine the premium directly.</li>
+  </ul>
+
+  <h2>Risks to the thesis</h2>
+  <div class="sub">What would prove us wrong</div>
+  <p>A short on a high-momentum, narrative-driven stock carries real risk, and intellectual honesty means naming it:</p>
+  <ul>
+    <li><strong>AIP adoption accelerates.</strong> Faster commercial uptake (US commercial revenue rose sharply through 2025) could validate the growth path we doubt.</li>
+    <li><strong>Major contract wins.</strong> Reported large UK MoD and UK investment deals, plus rising global defence budgets (SIPRI noted defence spending up ~9%), could extend the runway.</li>
+    <li><strong>Sticky retail base.</strong> A meme-like holder base has driven shares up ~130% YTD despite few "Buy" ratings; sentiment can stay irrational longer than a short can stay comfortable — hence the 2–3 year horizon and position sizing.</li>
+  </ul>
+  <p>We size and time the trade accordingly: the thesis is a valuation re-rating over years, not a call on the next print.</p>
+
+  <a href="index.html" class="back-link">← Back to portfolio</a>
+
+  <div class="disclaimer">
+    Prepared by Eva Martin Madhumal for the Bristol Investment Fund (TMT sector team) as a student equity-research exercise. For demonstration and educational purposes only; not investment advice or a recommendation to buy or sell any security. Prices, multiples and figures reflect the data available at the time of the original analysis (early 2025) and are not current.
+  </div>
+
+</div>
+</body>
+</html>
