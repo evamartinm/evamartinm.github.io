@@ -222,7 +222,7 @@ footer{border-top:1px solid var(--rule);padding:18px 40px;display:flex;justify-c
       <div class="card-body">
         <div class="card-tags"><span class="tag eng">Power Electronics</span><span class="tag eng">FEA</span><span class="tag">2025</span></div>
         <h3>Ferromagnetic Actuator & Buck Converter</h3>
-        <p class="card-desc">FEA inductance and force curves. Synchronous buck converter built and tested.</p>
+        <p class="card-desc">Two separate studies — electromagnetic FEA of a ferromagnetic actuator, and a synchronous buck converter built and tested.</p>
         <div class="card-arrow">View project →</div>
       </div>
     </div>
@@ -310,14 +310,16 @@ footer{border-top:1px solid var(--rule);padding:18px 40px;display:flex;justify-c
       <div class="detail-meta">
         <div class="tags"><span class="tag eng">Power Electronics</span><span class="tag eng">FEA</span><span class="tag des">EENG20005</span></div>
         <h2>Ferromagnetic Actuator FEA & Buck Converter</h2>
-        <p class="outcome">FEA inductance and force curves validated against analytical model across 0.1–5mm airgap. Buck converter output: 11.49V, 208mV ripple.</p>
+        <p class="outcome">Two distinct pieces of work from EENG20005. FEA: inductance and force validated against an analytical model across a 0.1–5mm airgap. Buck converter: separately designed, built and tested — 11.49V output at 208mV ripple.</p>
         <div class="tools">
           <span class="tool">FEMM</span><span class="tool">MATLAB</span><span class="tool">FEA</span><span class="tool">Reluctance circuits</span><span class="tool">Buck converter</span><span class="tool">PCB build</span><span class="tool">Simulink</span>
         </div>
       </div>
       <div class="detail-text">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.13em;text-transform:uppercase;color:var(--pink);margin-bottom:7px">Piece 1 — Ferromagnetic actuator · FEA</div>
         <p>Finite-element model of a ferromagnetic actuator across 50 airgap positions. Computed reluctance, inductance, co-energy, and electromagnetic force. FEA nonlinear inductance approximately half the analytical prediction — attributed to B-H saturation at I = 10A.</p>
-        <p>Synchronous buck converter designed (22V → 12V, 75kHz), inductor wound on ETD29 core, and physically built. Measured output 11.49V with 208mV peak-to-peak ripple.</p>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.13em;text-transform:uppercase;color:var(--pink);margin:20px 0 7px">Piece 2 — Synchronous buck converter</div>
+        <p>A separate power-electronics build: synchronous buck converter designed (22V → 12V, 75kHz), inductor wound on ETD29 core, and physically built. Measured output 11.49V with 208mV peak-to-peak ripple.</p>
       </div>
     </div>
 
